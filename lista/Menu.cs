@@ -72,6 +72,8 @@ namespace aula.lista
 
         public static void AdicionarVagao(ListaLigada gerenciarVagoes)
         {
+            Console.ReadLine();
+
             Console.Write("Digite o id: ");
             var id = Convert.ToInt32(Console.ReadLine());
 
@@ -104,33 +106,48 @@ namespace aula.lista
 
         public static Vagao BuscarExibirPorId(ListaLigada gerenciarVagoes)
         {
+            Console.ReadLine();
+
             Console.Write("Escreva o id: ");
             var id = Convert.ToInt32(Console.ReadLine());
 
             var vagao = gerenciarVagoes.GetById(id);
-            gerenciarVagoes.ExibirVagao(vagao);
+            if(vagao != null)
+                gerenciarVagoes.ExibirVagao(vagao);
+            else
+                Console.WriteLine("Nenhum vagão com o id {0} encontrado", id);
 
             return vagao;
         }
 
         public static Vagao BuscarExibirPorCarga(ListaLigada gerenciarVagoes)
         {
+            Console.ReadLine();
+
             Console.Write("Escreva o nome da carga: ");
             var carga = Console.ReadLine();
 
             var vagao = gerenciarVagoes.GetByCarga(carga);
-            gerenciarVagoes.ExibirVagao(vagao);
+            if(vagao != null)
+                gerenciarVagoes.ExibirVagao(vagao);
+            else
+                Console.WriteLine("Nenhum vagão com a carga {0} encontrado", carga);
 
             return vagao;
         }
 
         public static Vagao BuscarExibirPorPeso(ListaLigada gerenciarVagoes)
         {
-            Console.WriteLine("Escreva o peso: ");
+            Console.ReadLine();
+
+            Console.Write("Escreva o peso: ");
             var peso = Convert.ToInt32(Console.ReadLine());
 
             var vagao = gerenciarVagoes.GetByPeso(peso);
-            gerenciarVagoes.ExibirVagao(vagao);
+            if(vagao != null)
+                gerenciarVagoes.ExibirVagao(vagao);
+            else
+                Console.WriteLine("Nenhum vagão com o peso {0} encontrado", peso);
 
             return vagao;
         }
