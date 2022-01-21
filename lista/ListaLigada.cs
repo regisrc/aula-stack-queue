@@ -101,7 +101,7 @@ namespace aula.lista
 
             Console.WriteLine("Peso do vagão");
             var peso = Convert.ToInt32(Console.ReadLine());
-            if (peso != null)
+            if (peso != 0)
                 vagaoAlterado.Peso = (int)peso;
         }
     }
