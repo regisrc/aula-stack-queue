@@ -72,5 +72,19 @@ namespace aula.lista
             Console.WriteLine("Carga {0}", vagao.Carga);
             Console.WriteLine("Peso {0}", vagao.Peso);
         }
+
+        public void ExcluirVagao(int id)
+        {
+            var vagoes = getVagoes();
+            var vagaoExcluido = vagoes.Find(v => v.Id == id);
+            var vagao = vagoes.Find(v => v.VagaoAnterior?.Id == id);
+            if (vagaoExcluido != null)
+            {
+                if (vagao == null)
+                    Trem = vagaoExcluido.VagaoAnterior;
+                else
+                    vagao.VagaoAnterior = vagaoExcluido.VagaoAnterior;
+            }
+        }
     }
 }
