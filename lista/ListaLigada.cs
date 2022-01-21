@@ -86,5 +86,23 @@ namespace aula.lista
                     vagao.VagaoAnterior = vagaoExcluido.VagaoAnterior;
             }
         }
+
+        public void UpdateVagao(int id){
+            var vagaoAlterado = GetById(id);
+            if (vagaoAlterado == null)
+            {
+                Console.WriteLine("Vagão não encontrado");
+                return;
+            }
+            Console.WriteLine("Carga do vagão");
+            var carga = Console.ReadLine();
+            if(carga != null)
+            vagaoAlterado.Carga = carga;
+
+            Console.WriteLine("Peso do vagão");
+            var peso = Convert.ToInt32(Console.ReadLine());
+            if (peso != null)
+                vagaoAlterado.Peso = (int)peso;
+        }
     }
 }
