@@ -1,21 +1,18 @@
-﻿using System;
-using aula.sorting;
-using aula.searching;
+using System;
 
-namespace aula
+namespace aula.searching
 {
-    class Program
+    public class Search
     {
-        static int[] elementos = new int[5];
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
 
+        public static void Iniciar(int[] elementos) {
             Console.ReadLine();
 
+            Console.WriteLine("Busca...");
+
             Console.WriteLine("Escolha uma das opções...");
-            Console.WriteLine("1. Search");
-            Console.WriteLine("2. Sort");
+            Console.WriteLine("1. Linear Search...");
+            Console.WriteLine("2. Binary Search...");
             Console.WriteLine("0. Sair");
             Console.Write("Opção: ");
 
@@ -23,26 +20,21 @@ namespace aula
             {
                 case '1':
                     Console.ReadLine();
-
                     for(int i=0;i < elementos.Length; i++) {
                         Console.WriteLine("Insira o numero da posição {0} ...", i);
                         elementos[i] = Convert.ToInt32(Console.ReadLine());
                     }
-
-                    var elementosOrdenados = Sort.Iniciar(elementos, true);
-
-                    Search.Iniciar(elementosOrdenados);
-
+                    Console.WriteLine("Insira o valor de deseja buscar...");
+                    LinearSearch.linearSearch(Convert.ToInt32(Console.ReadLine()), elementos);
                     break;
                 case '2':
                     Console.ReadLine();
-
                     for(int i=0;i < elementos.Length; i++) {
                         Console.WriteLine("Insira o numero da posição {0} ...", i);
                         elementos[i] = Convert.ToInt32(Console.ReadLine());
                     }
-
-                    Sort.Iniciar(elementos, false);
+                    Console.WriteLine("Insira o valor de deseja buscar...");
+                    BinarySearch.binarySearch(Convert.ToInt32(Console.ReadLine()), elementos);                    
                     break;
                 case '0':
                     Environment.Exit(0);
@@ -51,6 +43,7 @@ namespace aula
                     Console.WriteLine("Opção invalida, tente novamente...");
                     break;
             }
+            Iniciar(elementos);
         }
     }
-}
+} 
