@@ -9,7 +9,7 @@ namespace aula.searching
             {
                 if (elementos[i] == numero)
                 {
-                    Console.WriteLine("Busca feita com sucesso " + "O número " + elementos[i] + " foi encontrado no índice " + i);
+                    Console.WriteLine("Busca feita com sucesso, " + "o número " + elementos[i] + " foi encontrado no índice " + i);
                     break;
                 }
                 else

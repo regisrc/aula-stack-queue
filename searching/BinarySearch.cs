@@ -22,7 +22,7 @@ namespace aula.searching
                 }
                 else if (numero == elementos[medio])
                 {
-                    Console.WriteLine("Busca feita com sucesso " + "O número " + numero + " foi encontrado no índice " + medio);
+                    Console.WriteLine("Busca feita com sucesso, " + "o número " + numero + " foi encontrado no índice " + medio);
                     break;
                 }
             }

@@ -20,19 +20,11 @@ namespace aula.searching
             {
                 case '1':
                     Console.ReadLine();
-                    for(int i=0;i < elementos.Length; i++) {
-                        Console.WriteLine("Insira o numero da posição {0} ...", i);
-                        elementos[i] = Convert.ToInt32(Console.ReadLine());
-                    }
                     Console.WriteLine("Insira o valor de deseja buscar...");
                     LinearSearch.linearSearch(Convert.ToInt32(Console.ReadLine()), elementos);
                     break;
                 case '2':
                     Console.ReadLine();
-                    for(int i=0;i < elementos.Length; i++) {
-                        Console.WriteLine("Insira o numero da posição {0} ...", i);
-                        elementos[i] = Convert.ToInt32(Console.ReadLine());
-                    }
                     Console.WriteLine("Insira o valor de deseja buscar...");
                     BinarySearch.binarySearch(Convert.ToInt32(Console.ReadLine()), elementos);                    
                     break;
@@ -43,7 +35,6 @@ namespace aula.searching
                     Console.WriteLine("Opção invalida, tente novamente...");
                     break;
             }
-            Iniciar(elementos);
         }
     }
 } 

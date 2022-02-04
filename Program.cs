@@ -43,6 +43,7 @@ namespace aula
                     }
 
                     Sort.Iniciar(elementos, false);
+                    
                     break;
                 case '0':
                     Environment.Exit(0);
@@ -51,6 +52,8 @@ namespace aula
                     Console.WriteLine("Opção invalida, tente novamente...");
                     break;
             }
+
+            Main(args);
         }
     }
 }
