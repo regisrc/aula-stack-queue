@@ -29,9 +29,9 @@ namespace aula
                         elementos[i] = Convert.ToInt32(Console.ReadLine());
                     }
 
-                    var elementosOrdenados = Sort.Iniciar(elementos, true);
+                    var elementosOrdenados = SortMenu.Iniciar(elementos, true);
 
-                    Search.Iniciar(elementosOrdenados);
+                    SearchMenu.Iniciar(elementosOrdenados);
 
                     break;
                 case '2':
@@ -42,7 +42,7 @@ namespace aula
                         elementos[i] = Convert.ToInt32(Console.ReadLine());
                     }
 
-                    Sort.Iniciar(elementos, false);
+                    SortMenu.Iniciar(elementos, false);
                     
                     break;
                 case '0':

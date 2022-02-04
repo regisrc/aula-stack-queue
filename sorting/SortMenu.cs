@@ -2,7 +2,7 @@ using System;
 
 namespace aula.sorting
 {
-    public class Sort
+    public class SortMenu
     {
 
         public static int[] Iniciar(int[] elementos, bool search) {
@@ -94,7 +94,6 @@ namespace aula.sorting
                     Console.WriteLine("Opção invalida, tente novamente...");
                     return elementos;
             }
-            //Iniciar(elementos, false); //?
         }
     }
 } 

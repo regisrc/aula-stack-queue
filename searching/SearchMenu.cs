@@ -2,7 +2,7 @@ using System;
 
 namespace aula.searching
 {
-    public class Search
+    public class SearchMenu
     {
 
         public static void Iniciar(int[] elementos) {
