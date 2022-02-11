@@ -1,6 +1,7 @@
 ﻿using System;
 using aula.sorting;
 using aula.searching;
+using aula.paralelismo;
 
 namespace aula
 {
@@ -13,46 +14,51 @@ namespace aula
 
             Console.ReadLine();
 
-            Console.WriteLine("Escolha uma das opções...");
-            Console.WriteLine("1. Search");
-            Console.WriteLine("2. Sort");
-            Console.WriteLine("0. Sair");
-            Console.Write("Opção: ");
+            // Console.WriteLine("Escolha uma das opções...");
+            // Console.WriteLine("1. Search");
+            // Console.WriteLine("2. Sort");
+            // Console.WriteLine("0. Sair");
+            // Console.Write("Opção: ");
 
-            switch (Console.Read())
-            {
-                case '1':
-                    Console.ReadLine();
+            // switch (Console.Read())
+            // {
+            //     case '1':
+            //         Console.ReadLine();
 
-                    for(int i=0;i < elementos.Length; i++) {
-                        Console.WriteLine("Insira o numero da posição {0} ...", i);
-                        elementos[i] = Convert.ToInt32(Console.ReadLine());
-                    }
+            //         for(int i=0;i < elementos.Length; i++) {
+            //             Console.WriteLine("Insira o numero da posição {0} ...", i);
+            //             elementos[i] = Convert.ToInt32(Console.ReadLine());
+            //         }
 
-                    var elementosOrdenados = SortMenu.Iniciar(elementos, true);
+            //         var elementosOrdenados = SortMenu.Iniciar(elementos, true);
 
-                    SearchMenu.Iniciar(elementosOrdenados);
+            //         SearchMenu.Iniciar(elementosOrdenados);
 
-                    break;
-                case '2':
-                    Console.ReadLine();
+            //         break;
+            //     case '2':
+            //         Console.ReadLine();
 
-                    for(int i=0;i < elementos.Length; i++) {
-                        Console.WriteLine("Insira o numero da posição {0} ...", i);
-                        elementos[i] = Convert.ToInt32(Console.ReadLine());
-                    }
+            //         for(int i=0;i < elementos.Length; i++) {
+            //             Console.WriteLine("Insira o numero da posição {0} ...", i);
+            //             elementos[i] = Convert.ToInt32(Console.ReadLine());
+            //         }
 
-                    SortMenu.Iniciar(elementos, false);
+            //         SortMenu.Iniciar(elementos, false);
                     
-                    break;
-                case '0':
-                    Environment.Exit(0);
-                    break;
-                default:
-                    Console.WriteLine("Opção invalida, tente novamente...");
-                    break;
-            }
+            //         break;
+            //     case '0':
+            //         Environment.Exit(0);
+            //         break;
+            //     default:
+            //         Console.WriteLine("Opção invalida, tente novamente...");
+            //         break;
+            // }
 
+            System.Console.WriteLine("Insira a quantidade de operações:");
+            var quantidade = Convert.ToInt32(Console.ReadLine());
+            string[] initialNumbers = new string[quantidade * 2 + 1];
+
+            MenuCalculadora.Menu(initialNumbers);
             Main(args);
         }
     }
