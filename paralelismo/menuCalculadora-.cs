@@ -4,10 +4,10 @@ namespace aula.paralelismo
 {
   public class MenuCalculadora {
 
-    public static void Menu(string[] initialNumbers) {
+    public static void Menu(string[] initialNumbers, int quantidadeOperacoes) {
             System.Console.WriteLine("CALCULADORA:");
             int teste = 0;
-            while (teste != initialNumbers.Length)
+            while (teste != quantidadeOperacoes)
             {
               System.Console.WriteLine("Insira o número para a operação:");
               initialNumbers[teste] = Console.ReadLine(); 
@@ -49,19 +49,27 @@ namespace aula.paralelismo
                     initialNumbers[teste] = "^";
                     break;
                 case '0':
-                    ;
+                    
                     break;
                 default:
                     Console.WriteLine("Opção invalida, tente novamente...");
                     break;
-            }
+           
+           }
+           teste++;
           }
+          
+          System.Console.WriteLine("Insira o número para a operação:");
+          initialNumbers[teste] = Console.ReadLine(); 
+          allOperation(initialNumbers);
+
         }
 
         public static void allOperation(string[] initialNumbers) {
+          
           for (int i = 0; i < initialNumbers.Length; i++)
           {
-            
+            Console.Write(initialNumbers[i]);
           }
         }
   }

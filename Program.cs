@@ -1,6 +1,4 @@
 ﻿using System;
-using aula.sorting;
-using aula.searching;
 using aula.paralelismo;
 
 namespace aula
@@ -55,10 +53,12 @@ namespace aula
             // }
 
             System.Console.WriteLine("Insira a quantidade de operações:");
+            
             var quantidade = Convert.ToInt32(Console.ReadLine());
-            string[] initialNumbers = new string[quantidade * 2 + 1];
+            var calculo= (quantidade * 2);
+            string[] initialNumbers = new string[calculo + 1];
 
-            MenuCalculadora.Menu(initialNumbers);
+            MenuCalculadora.Menu(initialNumbers, calculo);
             Main(args);
         }
     }
