@@ -55,6 +55,12 @@ namespace aula
             System.Console.WriteLine("Insira a quantidade de operações:");
             
             var quantidade = Convert.ToInt32(Console.ReadLine());
+            if (quantidade > 99)
+            {
+                Console.WriteLine("O número máximo de operações é 99");
+                Main(args);
+            }
+
             var calculo= (quantidade * 2);
             string[] initialNumbers = new string[calculo + 1];
 
